@@ -1,0 +1,354 @@
+/* Reset et styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f6fa;
+}
+
+/* Header et Navigation */
+header {
+  background-color: #2c3e50;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+nav a:hover {
+  color: #3498db;
+}
+
+/* Sections principales */
+main {
+  margin-top: 60px;
+}
+
+section {
+  padding: 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+section > * {
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+/* Section Accueil */
+#accueil {
+  background-image: url("images/acc.jpg");
+  color: #fff;
+  text-align: center;
+}
+#accueil h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+#accueil p {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+/* Section À propos */
+#apropos {
+  background-image: url("images/app.jpg");
+}
+
+.about-content {
+  display: flex;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #fff;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Section Compétences */
+#competences {
+  background-image: url("images/competences.jpg");
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.skill-card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-icon {
+  font-size: 40px;
+  font-weight: 700;
+  color: #50242f;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.skill-card h3 {
+  color: #50242f;
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.skill-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skill-level {
+  background: #f0f0f0;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: #50242f;
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+}
+
+/* Section Projets */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Contact */
+.contact-section {
+  background-image: url("images/formulaire.jpg");
+  color: white;
+  position: relative;
+}
+
+.contact-section h2 {
+  color: white;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  position: relative;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+
+#contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+#contact-form button {
+  background: white;
+  color: #50242f;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+#contact-form button:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries pour le formulaire de contact */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 20px;
+    margin: 0 15px;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    padding: 12px;
+  }
+
+  section {
+    background-attachment: scroll;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: 300;
+}
+
+/* Media Queries pour mobile */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .skill-card {
+    padding: 20px;
+  }
+}
