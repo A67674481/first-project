@@ -136,7 +136,7 @@ h2 {
 
 /* Section Compétences */
 #competences {
-  background-image: url("images/competences.jpg");
+  background-color: #f0f0f0;
 }
 .skills-grid {
   display: grid;
@@ -207,6 +207,70 @@ h2 {
   max-width: 1200px;
   position: relative;
   z-index: 2;
+}
+
+.project-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.project-icon {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  color: #2c3e50;
+  font-size: 22px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.project-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.tech-tag {
+  background: #3498db;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.project-status {
+  text-align: center;
+  color: #e74c3c;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px;
+  background: #fdf2f2;
+  border-radius: 8px;
+  border: 1px solid #fadbd8;
 }
 
 /* Section Contact */
